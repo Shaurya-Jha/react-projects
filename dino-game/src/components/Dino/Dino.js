@@ -1,4 +1,5 @@
 import {useEffect, useRef, useState} from 'react'
+import './Dino.css'
 
 function Dino() {
 
@@ -13,7 +14,7 @@ function Dino() {
     // method to add jump class every 300ms as the class jump css has jumping animation of 0.3s(300ms)
     // so on each key press we need to add animation and remove animation
     const jump = () => {
-        if(!dinoRef.current && dinoRef.current.classList != 'jump'){
+        if(!!dinoRef.current && dinoRef.current.classList !== 'jump'){
             dinoRef.current.classList.add('jump');
             setTimeout(() => {
                 dinoRef.current.classList.remove('jump');
